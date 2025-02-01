@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #b5d3b5;
+}
+header {
+  background-color: black;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo img {
+  width: 70px;
+  height: 80px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: black;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: white;
+}
+.text-left {
+  width: 70%;
+  height: 50%;
+}
+.about-text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.about-image{
+  width: 20%;
+  align-self: center;
+  border-radius: 5px;
+}
+main {
+  margin-top: 80px;
+}
+section {
+  padding: 4rem 2rem;
+}
+.hero {
+  background-image: url("/placeholder.svg?height=800&width=1200");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.countdown {
+  display: flex;
+  gap: 1rem;
+}
+.countdown div {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 5px;
+  min-width: 100px;
+}
+.countdown span {
+  display: block;
+}
+.countdown span:first-child {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.country {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.country:hover {
+  transform: translateY(-5px);
+}
+.country img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.country h3,
+.country p {
+  padding: 0.5rem 1rem;
+}
+.fixture-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+.fixture-table th,
+.fixture-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.fixture-table thead {
+  background-color: #349333;
+  color: #50487b;
+}
+.fixture-table tbody tr:nth-child(even) {
+  background-color: #349333;
+}
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+.team img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.news-item {
+  background-color:white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(38, 198, 43, 0.1);
+}
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.news-item p {
+  padding: 0.5rem 1rem;
+}
+.read-more {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color:whitesmoke;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+.read-more:hover {
+  background-color:rgba(255, 255, 255, 0.833);
+}
+footer {
+  background-color:black;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-icon:hover {
+  color: #f39c12;
+}
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    margin-top: 1rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .countdown div {
+    min-width: 80px;
+  }
+  .countdown span:first-child {
+    font-size: 2rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
